@@ -1,0 +1,371 @@
+/* Styling the body*/
+body{
+    background: radial-gradient(circle at top, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+background-repeat: no-repeat;
+font-family: 'Barlow Semi Condensed' , sans-serif;
+background-size: cover;
+}
+/* Background for all the body */
+:root{
+    height:100%;
+}
+/* Remove padding and margin */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+ }
+ .container-{
+    animation-name:drop;
+    animation-duration: 1s;
+    margin:100px auto;
+    width:fit-content;
+    
+ }
+
+.container- .logo{
+    display:flex;
+    justify-content: space-between;
+    width:700px;
+    height:fit-content;
+    align-items: center;
+    border: 3px solid hsl(217, 16%, 45%);
+    border-radius:17px;
+    padding:20px;
+    padding-left: 40px;  
+ }
+ .container- .logo #logo{
+    width:fit-content;
+ }
+ /*Styling the scoreboard*/
+ .container- .logo .scoreboard{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+height:100px;
+width:200px;
+background-color: white;
+border-radius: 15px;
+align-items: center;
+  }
+   /*Styling the score*/
+   .scoreboard #score{
+    letter-spacing: 4px;
+    color:hsl(229, 64%, 46%);
+    font-weight: 600;
+    font-size: 2rem;
+   }
+   .scoreboard #score-display{
+    letter-spacing: 4px;
+    color:hsl(220, 9.8%, 36.1%);
+    font-weight: 700;
+    font-size: 3rem;
+    line-height:55px;
+   }
+    /*Styling the game display*/
+   main #game-display{
+    display: flex;
+    margin: auto;
+    position: relative;
+    justify-content: center;
+    width:fit-content;
+    animation-name: show;
+    animation-duration: 1s;
+animation-timing-function: ease-in-out;
+   }
+   .triangle-img{
+    margin-top: 20rem;
+    margin-left: 50rem;
+   width:30rem;
+   height:500px;
+   }
+
+   /*giving the rps image border and size*/
+   main .play-choice {
+    height:250px;
+    width:250px;
+    border-radius:50% ;
+    border: 25px solid transparent;
+    cursor:pointer;
+   }
+   main #game-display .play-choice{
+      /*position: absolute;*/
+    transition: transform 3s;
+   }
+   /*allows the border get bigger on hover*/
+   main #game-display .play-choice:hover{
+    transform: scale(1.1);
+   }
+    /*styling the rps images*/
+    main .play-choice .choice-btn img{
+        height:auto;
+        width:50%
+    }
+    
+   /*styling the rps images btn*/
+   main .play-choice .choice-btn {
+height: 100%;
+width:100%;
+border-radius: 50%;
+display: grid;
+place-items: center; /*place the images at the center*/
+box-shadow: 0px 15px rgba(185, 182, 207, 0.2) inset;
+background-color: hsl(220, 5%, 88%);
+   }
+  /*styling the rock btn*/
+  
+   main .choice-rock{
+    border-color: hsl(349, 70%, 56%);
+    box-shadow: 0px 0px hsl(349, 71%, 40%);
+   }
+  
+   main #game-display .choice-rock {
+    position:relative;
+    top:700px;
+    right:23rem;
+    
+   }
+   /*styling the scissors btn*/
+   main .choice-scissors{
+    border-color: hsl(40, 70%, 56%);
+    box-shadow: 0px 2px hsl(39, 71%, 40%);
+   }
+   main #game-display .choice-scissors {
+    position:relative;
+    top:150px;
+    right:420px;
+   }
+    /*styling the paper btn*/
+   main .choice-paper{
+    border-color: hsl(220, 81%, 44%);
+    box-shadow: 0px 0px hsl(230, 71%, 40%);
+   }
+   main #game-display .choice-paper {
+    position:relative;
+    top:150px;
+    right:75rem;
+   }
+    /*Game round display*/
+    main  .round-display{
+        display:flex;
+        width:1000px;
+        position: relative;
+        justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
+        animation-name: zoom-in;
+        animation-delay: -0.1s;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+
+    }
+        /* round display*/
+        main .round-display .round {
+            gap:60px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+        /*My round */
+        main .round-display .round #me{
+        font-size:2rem;
+            font-weight: 600;
+            color:white;
+            letter-spacing: 3px;
+            text-align: center;
+        }
+        /*comp round display*/
+        main .round-display .round #comp{
+            font-size:2rem;
+                font-weight: 600;
+                color:white;
+                letter-spacing: 3px;
+                text-align: center;
+            }
+        main .round-display .btn-choosen{
+height:350px;
+width:350px;            
+        }
+        /* round result*/
+main .round-display .result{
+    position: absolute;
+    display: flex;
+    left:50%;
+    flex-direction: column;
+    bottom: 100px;
+    transform: translateX(-50%);
+}
+/*Reason for loss or win*/
+main .round-display .result .reason{
+    font-size: 2rem;
+    color:hsl(230, 89%, 75%);
+    text-align: center;
+}
+main .round-display .result #first-result{
+    font-size:4rem ;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+}
+/*My round repeat/replay button Styling*/
+main .round-display .result .repeat-btn{
+border:none;
+border-radius: 15px;
+font-weight: 600;
+font-size: 2rem;
+padding: 30px;
+margin-top: 40px;
+letter-spacing: 3px;
+color:hsl(350, 94%, 57%);
+cursor: pointer;
+}
+/*Rules Styling*/
+ section .rule{
+position: absolute;
+font-size: 3rem;
+background-color:transparent;
+color: white;
+cursor: pointer;
+padding:15px 35px;
+letter-spacing: 3px;
+border-radius: 15px;
+right:30px;
+bottom:30px;
+border: 2px solid hsl(217, 16%, 45%);
+
+}
+.rules-mode{
+    height:fit-content;
+    position: absolute;
+top:30%;
+    left:40%;
+    background-color: white;
+    border-radius: 15px;
+    width:600px;
+    padding:40px 40px;
+    z-index:98;
+    transform:translate (-50%, -50%);
+}
+.rules-mode .firstdiv{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#rule-image{
+    font-size:4rem;
+    width:500px;
+}
+.rules-mode .firstdiv #ru{
+    font-size: 2rem;
+    font-weight: 700;
+    color:hsl (229, 25%, 31%);
+}
+.rules-mode .img-rule{
+    margin: 50px auto;
+    margin-bottom: 15px;
+    width:fit-content;
+}
+.cover{
+    position:absolute;
+    top:0px;
+    left:0px;
+    bottom:0px;
+    right:0px;
+    background-color: rgba(0, 0,0. );
+}
+.close-rules{
+    cursor:pointer;
+}
+.cover, .rules-mode{
+    display:none;
+}
+.show{
+    display:block;
+}
+.game-over{
+    position:absolute;
+height:300px;
+    z-index: 100;
+    width:600px;
+    top:50%;
+    left:35%;
+    font-size:3rem;
+    transform: translate( 50%, 50%);
+    background-color: white;
+    display:flex;
+    flex-direction: column;
+    padding:40px;
+    letter-spacing:2px;
+    animation-name: show-two;
+animation-duration:0.5s ;
+}
+.game-over-display{
+position:absolute;
+top:0px;
+    left:0;
+    bottom:0;
+    right:0;
+    z-index:99;
+    animation-name:show;
+    animation-duration:0.2s;
+    display:none;
+    background-color: rgba(0, 0,0, 0. );
+}
+.game-over #congrats{
+    font-size:2.5rem;
+    font-weight: 700;
+color:hsl(230, 89%, 65%);
+    text-align:center;
+}
+.game-over #playagain{
+    padding:1rem;
+    margin: auto;
+    font-size:1.5rem;
+    background-color: transparent;
+    border-radius: 15px;
+    border:2px solid hsl(214, 47%, 23%);
+    cursor: pointer;
+    color:hsl(214, 47%, 23%);
+    transition: transform 300ms;
+}
+.game-over #playagain:hover{
+    transform: scale(1.1);
+}
+
+
+
+
+/* FUNCTIONALITY */
+main .disappear{
+    display: none;
+}
+
+main .appear{
+    display: flex;
+    transform: scale(10);
+}
+
+
+/* ANIMATION */
+@keyframes show{
+    from{filter: opacity(0);}
+    to{filter: opacity(1);}
+}
+
+@keyframes show-two{
+    from{top: -300px;}
+    to{top: 50%;}
+}
+
+@keyframes zoom-in{
+    0% {transform: scale(20);}
+    70% {transform: scale(0.8);}
+    100% {transform: scale(1);}
+}
+
+@keyframes drop{
+    0% {margin-top: -250px;}
+    70% {margin-top: 100px;}
+    100% {margin-top: 50px;}
+}

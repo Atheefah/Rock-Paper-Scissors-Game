@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROCK PAPER SCISSORS</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="RPS.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600&display=swap" rel="stylesheet">    
+</head>
+<body>
+    <!--First container with the logo and score display-->
+    <section class="container-">
+        <div class="logo">
+          <div><img src="images\logo.svg" alt="logo" id="logo"></div>  
+        <div class="scoreboard">
+            <span id="score">SCORE</span>
+            <span id="score-display">0:0</span>
+        </div>
+    </div>
+    </section>
+     <!--second container with the image choice-->
+    <main class="container">
+        <div id="game-display">
+            <img src="images\bg-triangle.svg" alt="" class="triangle-img">
+             <!-- the  rock image choice-->
+            <div class="play-choice choice-rock play-button" id="rock">
+                <div class="choice-btn"><img src="images\icon-rock.svg" alt=""  ></div>
+            </div>
+<!-- the  scissors image choice-->
+            <div class="play-choice choice-scissors play-button" id="scissors">
+                <div class="choice-btn"><img src="images\icon-scissors.svg" alt="" ></div>
+            </div>
+<!-- the  paper image choice-->
+<div class="play-choice choice-paper play-button"  id="paper">
+    <div class="choice-btn"><img src="images\icon-paper.svg" alt=""> </div>
+        </div>
+        </div>
+<!-- the game round display-->
+<div class="round-display">
+    <!-- my round display-->
+    <div class="round">
+        <span id="me">YOU PICKED</span>
+        <div class="play-choice my-round">
+
+        </div>
+    </div>
+    <!-- the computer round display-->
+    <div class="round">
+        <span id="comp">THE HOUSE PICKED</span>
+        <div class="play-choice comp-round"> 
+
+             </div>
+    </div>
+    <!-- the result display-->
+<div class="result">
+    <span id="first-result">YOU LOSE</span>
+    <p class="reason">ROCK BEAT SCISSORS</p>
+    <button class="repeat-btn" onclick="myFunction()">PICK AGAIN</button>
+</div>
+</div>
+
+    </main>
+    <!-- the rules display-->
+    <section>
+        <button class="rule">RULES</button>
+        <div class="rules-mode">
+        <div class="firstdiv">
+        <span id="ru">RULES</span>
+        <span class="close-rules"><img src="images\icon-close.svg" alt="Close"></span>
+    </div>
+<div class="img-rule">
+<img src="images\image-rules.svg" alt="" id="rule-image" >
+</div>
+
+    </div>
+<div class="cover"></div>
+    </section>
+
+    <section class="game-over">
+    <span id="congrats">CONGRATULATIONS! YOU WON</span>
+    <button id="playagain">PLAY AGAIN</button>
+</section>
+<section class="game-over-display"></section>
+
+<script src="rock.js"></script>
+</body>
+</html>
